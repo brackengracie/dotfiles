@@ -22,7 +22,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'gfontenot/vim-xcode'
-Plugin 'wakatime/vim-wakatime'
 
 " Syntax
 Plugin 'digitaltoad/vim-pug'
@@ -195,8 +194,6 @@ map <Leader>ra :%s/
 map <Leader>w <C-w>w
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>e :Explore<cr>
-map <Leader>gn :e ~/Dropbox (Underbelly)/notes<cr>
-map <Leader>gj :e ~/Dropbox (Underbelly)/notes/journal/<C-r>=strftime("%Y-%m-%d") . '.md'<cr><cr>
 nmap <silent> <leader>tn :TestNearest<CR>
 nmap <silent> <leader>tc :TestFile<CR>
 nmap <silent> <leader>ta :TestSuite<CR>
@@ -263,17 +260,17 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 "====================
 " Prettier
 "====================
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.graphql Prettier
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.graphql Prettier
 
-let g:ale_linters = {
-\  'javascript': ['flow', 'eslint']
-\}
+" let g:ale_linters = {
+" \  'javascript': ['flow', 'eslint']
+" \}
 
-let g:ale_fixers = {
-\  'javascript': ['prettier', 'eslint']
-\}
+" let g:ale_fixers = {
+" \  'javascript': ['prettier', 'eslint']
+" \}
 
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-let g:ale_echo_msg_format = '%linter%: %s [%severity%]'
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+" let g:ale_echo_msg_format = '%linter%: %s [%severity%]'
